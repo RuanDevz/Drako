@@ -89,7 +89,15 @@ const Discord = () => {
                     <span className="text-lg font-semibold text-gray-900">Mensal</span>
                     <span className="text-2xl font-bold text-primary">R$ 239</span>
                   </div>
-                  <p className="text-gray-600 text-sm">Acesso completo por 30 dias</p>
+                  <p className="text-gray-600 text-sm mb-4">Acesso completo por 30 dias</p>
+                  <a 
+                    href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=UK7NSUMF5HPDW" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-full inline-block text-center bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-dark transition-all duration-300 transform hover:scale-105"
+                  >
+                    Assinar Mensal
+                  </a>
                 </div>
                 
                 <div className="p-6 bg-primary/5 rounded-xl border-2 border-primary">
@@ -100,13 +108,17 @@ const Discord = () => {
                       <p className="text-sm text-primary font-semibold">Economia de R$ 1.068</p>
                     </div>
                   </div>
-                  <p className="text-gray-600 text-sm">Acesso completo por 12 meses</p>
+                  <p className="text-gray-600 text-sm mb-4">Acesso completo por 12 meses</p>
+                  <a 
+                    href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YYET3MENQE49E" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="w-full inline-block text-center bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-primary-dark transition-all duration-300 transform hover:scale-105"
+                  >
+                    Assinar Anual
+                  </a>
                 </div>
               </div>
-
-              <button className="w-full mt-6 bg-primary text-white font-bold py-4 px-6 rounded-lg hover:bg-primary-dark transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                Quero Entrar para o VIP
-              </button>
             </div>
           </div>
         </div>

@@ -1,81 +1,107 @@
-import React from 'react';
-import { MessageCircle, Crown, Calendar, Youtube } from 'lucide-react';
+import React, { useEffect, useRef } from 'react';
+import { TrendingUp, Users, Calendar } from 'lucide-react';
 
-const Footer = () => {
+const About = () => {
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-fade-in');
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <footer className="bg-white py-12 px-4 sm:px-6 lg:px-8 border-t">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
-          <div className="col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">D</span>
-              </div>
-              <span className="text-xl font-bold text-gray-900">Drako Trader</span>
-            </div>
-            <p className="text-gray-600 mb-4">
-              Transformando traders através de estratégias reais e comunidade forte. 
-              Opere com segurança e consistência no trading esportivo.
-            </p>
-          </div>
-          
-          <div>
-            <h4 className="font-bold text-gray-900 mb-4">Links Úteis</h4>
-            <ul className="space-y-2">
-              <li>
-                <a href="https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbHI1dkt2OF90WHFGNzJ2NGdWUEoxVmtXdlJmQXxBQ3Jtc0tuek9lNjUzQjRWWENrQ0s4YTZaektMWE1YX3c5UzBiQ2pNMEticjRzVm1MY2ZhSkMyUVUwaWRpaVZKMjdfOVAyUHRhNTFpeFVIdHlpVkxIaHFFSjJxcmJOZllCQk9XWkhNeGJLMTR4bmdxT3JLd1EwYw&q=https%3A%2F%2Ft.me%2Fcanaldodrako&v=WEAn6WoDM0o" className="text-gray-600 hover:text-primary transition-colors">
-                  Telegram
-                </a>
-              </li>
-              <li>
-                <a href="#discord" className="text-gray-600 hover:text-primary transition-colors">
-                  Discord VIP
-                </a>
-              </li>
-              <li>
-                <a href="#consultoria" className="text-gray-600 hover:text-primary transition-colors">
-                  Consultoria
-                </a>
-              </li>
-              <li>
-                <a href="https://youtube.com/drako" className="text-gray-600 hover:text-primary transition-colors">
-                  YouTube
-                </a>
-              </li>
-            </ul>
-          </div>
-          
-          <div>
-            <h4 className="font-bold text-gray-900 mb-4">Contato</h4>
-            <div className="flex space-x-4">
-              <a 
-                href="https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbHI1dkt2OF90WHFGNzJ2NGdWUEoxVmtXdlJmQXxBQ3Jtc0tuek9lNjUzQjRWWENrQ0s4YTZaektMWE1YX3c5UzBiQ2pNMEticjRzVm1MY2ZhSkMyUVUwaWRpaVZKMjdfOVAyUHRhNTFpeFVIdHlpVkxIaHFFSjJxcmJOZllCQk9XWkhNeGJLMTR4bmdxT3JLd1EwYw&q=https%3A%2F%2Ft.me%2Fcanaldodrako&v=WEAn6WoDM0o" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
-              >
-                <MessageCircle className="w-5 h-5" />
-              </a>
-              <a 
-                href="https://www.youtube.com/@DrakoTraderEsportivo" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
-              >
-                <Youtube className="w-5 h-5" />
-              </a>
-            </div>
-          </div>
+    <section id="about" ref={sectionRef} className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 opacity-0 transition-opacity duration-1000 relative overflow-hidden">
+      {/* Football Background Elements */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-20 right-20 w-16 h-16 bg-primary rounded-full flex items-center justify-center">
+          <span className="text-white text-2xl">⚽</span>
         </div>
-        
-        <div className="border-t pt-8 text-center">
-          <p className="text-gray-600">
-            © 2025 Drako Trader. Todos os direitos reservados.
-          </p>
+        <div className="absolute bottom-20 left-20 w-12 h-12 bg-primary-light rounded-full flex items-center justify-center">
+          <span className="text-white text-lg">⚽</span>
+        </div>
+        <div className="absolute top-1/2 right-1/4 w-8 h-8 bg-primary/50 rounded-full flex items-center justify-center">
+          <span className="text-white text-sm">⚽</span>
         </div>
       </div>
-    </footer>
+
+      <div className="max-w-6xl mx-auto relative z-10">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+            Quem é <span className="text-primary">Drako</span>
+          </h2>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="space-y-6">
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Trader esportivo com mais de 10 anos de experiência real no mercado, Drako vive exclusivamente do trading e opera todos os dias com consistência e disciplina. 
+              Sua abordagem direta e sem enrolação conquistou mais de 30 mil seguidores que buscam resultados práticos.
+            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Compartilha entradas e análises detalhadas no Telegram e Discord, além de fazer lives regulares no YouTube, ajudando traders iniciantes e experientes 
+              a desenvolverem uma mentalidade vencedora no trading esportivo.
+            </p>
+            
+            <div className="grid sm:grid-cols-3 gap-6 mt-8">
+              <div className="text-center p-4 bg-white rounded-lg shadow-sm">
+                <TrendingUp className="w-8 h-8 text-primary mx-auto mb-2" />
+                <p className="font-semibold text-gray-900">Consistência</p>
+                <p className="text-sm text-gray-600">Operações diárias</p>
+              </div>
+              <div className="text-center p-4 bg-white rounded-lg shadow-sm">
+                <Users className="w-8 h-8 text-primary mx-auto mb-2" />
+                <p className="font-semibold text-gray-900">Comunidade</p>
+                <p className="text-sm text-gray-600">+30K seguidores</p>
+              </div>
+              <div className="text-center p-4 bg-white rounded-lg shadow-sm">
+                <Calendar className="w-8 h-8 text-primary mx-auto mb-2" />
+                <p className="font-semibold text-gray-900">Experiência</p>
+                <p className="text-sm text-gray-600">+10 anos no mercado</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex justify-center relative">
+            {/* Football Stadium Background */}
+            <div className="absolute inset-0 opacity-10">
+              <div className="w-full h-full bg-gradient-to-b from-green-600 to-green-800 rounded-full"></div>
+              <div className="absolute top-1/4 left-1/4 w-1/2 h-1/2 border-2 border-white rounded-full"></div>
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-white rounded-full"></div>
+            </div>
+            
+            <div className="w-80 h-80 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center shadow-2xl relative z-10">
+              <div className="w-72 h-72 bg-white rounded-full flex items-center justify-center">
+                <div className="text-center">
+                  <div className="w-24 h-24 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <span className="text-3xl font-bold text-white">D</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900">Drako</h3>
+                  <p className="text-primary font-semibold">Trader Esportivo</p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Floating Football Elements */}
+            <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-primary rounded-full shadow-lg flex items-center justify-center animate-pulse">
+              <span className="text-white text-xs">⚽</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
-export default Footer;
+export default About;

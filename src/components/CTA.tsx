@@ -21,6 +21,17 @@ const CTA = () => {
     return () => observer.disconnect();
   }, []);
 
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    const element = document.querySelector(targetId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
+
   return (
     <section ref={sectionRef} className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900 opacity-0 transition-opacity duration-1000">
       <div className="max-w-4xl mx-auto text-center">
@@ -35,7 +46,7 @@ const CTA = () => {
 
         <div className="grid sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
           <a 
-            href="https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbHI1dkt2OF90WHFGNzJ2NGdWUEoxVmtXdlJmQXxBQ3Jtc0tuek9lNjUzQjRWWENrQ0s4YTZaektMWE1YX3c5UzBiQ2pNMEticjRzVm1MY2ZhSkMyUVUwaWRpaVZKMjdfOVAyUHRhNTFpeFVIdHlpVkxIaHFFSjJxcmJOZllCQk9XWkhNeGJLMTR4bmdxT3JLd1EwYw&q=https%3A%2F%2Ft.me%2Fcanaldodrako&v=WEAn6WoDM0o" 
+            href="https://t.me/canaldodrako" 
             target="_blank" 
             rel="noopener noreferrer"
             className="group bg-white p-6 rounded-xl hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
@@ -47,6 +58,7 @@ const CTA = () => {
           
           <a 
             href="#discord"
+            onClick={(e) => handleSmoothScroll(e, '#discord')}
             className="group bg-primary p-6 rounded-xl hover:bg-primary-dark transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
           >
             <Crown className="w-8 h-8 text-white mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
@@ -56,6 +68,7 @@ const CTA = () => {
           
           <a 
             href="#consultoria"
+            onClick={(e) => handleSmoothScroll(e, '#consultoria')}
             className="group bg-white p-6 rounded-xl hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
           >
             <Calendar className="w-8 h-8 text-primary mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />

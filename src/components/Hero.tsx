@@ -46,12 +46,6 @@ const Hero = () => {
       {/* Football/Trading Elements */}
       <div className="absolute inset-0 opacity-8">
         {/* Football Icons */}
-        <div className="absolute top-32 left-1/4 transform -rotate-12 animate-bounce">
-          <div className="w-16 h-16 bg-gradient-to-br from-white to-gray-300 rounded-full flex items-center justify-center shadow-lg">
-            <span className="text-2xl">⚽</span>
-          </div>
-        </div>
-        
         <div className="absolute top-1/3 right-1/5 transform rotate-12 animate-pulse">
           <div className="w-12 h-12 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center">
             <span className="text-white text-lg">⚽</span>
@@ -179,12 +173,12 @@ const Hero = () => {
             Domine o <span className="text-primary">Trading Esportivo</span> com Drako
           </h1>
           <p className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Aprenda estratégias reais, participe de uma comunidade forte e opere com segurança todos os dias.
+            Aprenda estratégias reais, participe de uma comunidade forte e opere com segurança todos os dias. Acompanhe também as lives no YouTube!
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <a 
-              href="https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbHI1dkt2OF90WHFGNzJ2NGdWUEoxVmtXdlJmQXxBQ3Jtc0tuek9lNjUzQjRWWENrQ0s4YTZaektMWE1YX3c5UzBiQ2pNMEticjRzVm1MY2ZhSkMyUVUwaWRpaVZKMjdfOVAyUHRhNTFpeFVIdHlpVkxIaHFFSjJxcmJOZllCQk9XWkhNeGJLMTR4bmdxT3JLd1EwYw&q=https%3A%2F%2Ft.me%2Fcanaldodrako&v=WEAn6WoDM0o" 
+              href="https://t.me/canaldodrako" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
@@ -220,12 +214,12 @@ const Hero = () => {
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto">
           <div className="text-center p-4 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10">
-            <div className="text-2xl font-bold text-primary mb-1">+30000</div>
-            <div className="text-sm text-gray-300">Seguidores</div>
+            <div className="text-2xl font-bold text-primary mb-1">+30K</div>
+            <div className="text-sm text-gray-300">Inscritos YouTube</div>
           </div>
           <div className="text-center p-4 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10">
             <div className="text-2xl font-bold text-primary mb-1">10+</div>
-            <div className="text-sm text-gray-300">Anos de Experiência</div>
+            <div className="text-sm text-gray-300">Anos no Mercado</div>
           </div>
           <div className="text-center p-4 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10">
             <div className="text-2xl font-bold text-primary mb-1">365</div>
@@ -233,7 +227,7 @@ const Hero = () => {
           </div>
           <div className="text-center p-4 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10">
             <div className="text-2xl font-bold text-primary mb-1">100%</div>
-            <div className="text-sm text-gray-300">Transparência</div>
+            <div className="text-sm text-gray-300">Vive do Trading</div>
           </div>
         </div>
       </div>
