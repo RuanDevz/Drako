@@ -218,7 +218,7 @@ const Hero = () => {
             <div className="text-sm text-gray-300">Inscritos YouTube</div>
           </div>
           <div className="text-center p-4 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10">
-            <div className="text-2xl font-bold text-primary mb-1">10+</div>
+            <div className="text-2xl font-bold text-primary mb-1">8+</div>
             <div className="text-sm text-gray-300">Anos no Mercado</div>
           </div>
           <div className="text-center p-4 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10">
